@@ -1,0 +1,130 @@
+.register-page {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.register-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.register-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.register-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(90deg, #ffd700 0%, #ffa500 100%);
+    border-radius: 0 50% 0 0;
+}
+
+.register-form-container {
+    padding: 3rem 2.5rem;
+}
+
+.register-form-container h2 {
+    color: #1e3a5f;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.register-form-container .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.register-form-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.register-form-container input[type="text"],
+.register-form-container input[type="email"],
+.register-form-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.register-form-container input:focus {
+    outline: none;
+    border-color: #5cb3ff;
+}
+
+.checkbox-group {
+    margin-bottom: 1rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-register {
+    width: 100%;
+    background: #1e3a5f;
+    color: white;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.btn-register:not(:disabled):hover {
+    background: #2d5a8f;
+}
+
+.btn-register:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .register-image {
+        display: none;
+    }
+    
+    .register-form-container {
+        padding: 2rem 1.5rem;
+    }
+}
